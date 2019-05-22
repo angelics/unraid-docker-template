@@ -31,6 +31,11 @@
         <ContainerPort>5800</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>8767</HostPort>
+        <ContainerPort>8767</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -43,5 +48,6 @@
   <Labels/>
   <Config Name="port" Target="5900" Default="" Mode="tcp" Description="Container Port: 5900" Type="Port" Display="always" Required="false" Mask="false">5900</Config>
   <Config Name="port" Target="5800" Default="" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="false" Mask="false">5800</Config>
+  <Config Name="port" Target="8767" Default="" Mode="8767" Description="Container Port: 8767" Type="Port" Display="always" Required="false" Mask="false">8767</Config>
   <Config Name="RavenCoin Blockchain Path" Target="/storage/.raven/" Default="" Mode="rw" Description="Container Path: /storage/.raven/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/RavenCoinWallet/</Config>
 </Container>
