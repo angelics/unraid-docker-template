@@ -25,7 +25,18 @@
   </Description>
   <Beta>False</Beta>
   <Project>https://github.com/RavenProject/Ravencoin</Project>
-  <Date>2019-05-25</Date>
+  <Date>2019-05-29</Date>
+  <Changes>[font size=4][center]RavencoinWalletGUI Change Log[/center][/font]
+[font size=3][b]v190529[/b][/font]
+&#x00a0;&#x00a0;- smaller size
+
+[font size=3][b]v190522[/b][/font]
+&#x00a0;&#x00a0;- enable p2p port: TCP 8767
+
+[font size=3][b]v190521[/b][/font]
+&#x00a0;&#x00a0;- initial release.
+
+  </Changes>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -94,9 +105,14 @@
       <Name>X11VNC_EXTRA_OPTS</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>ENABLE_CJK_FONT</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <!-- Volume Mappings -->
-  <Config Name="Storage" Target="/storage/.raven/" Default="/mnt/user/appdata/RavenCoinWallet/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage/.raven" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Storage" Target="/storage/.raven/" Default="/mnt/user/appdata/RavencoinWallet/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage/.raven" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <!-- Variable Mappings -->
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
@@ -106,6 +122,7 @@
   <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; to encrypt the connection.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Note:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; When enabling the secure connection, security parameters needs to be generated.  This &amp;lt;b&amp;gt;one-time&amp;lt;/b&amp;gt; operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Warning:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="ENABLE CJK FONT" Target="ENABLE_CJK_FONT" Default="0" Mode="" Description="ENABLE_CJK_FONT for japanese or chinese character support." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <!-- Port Mappings -->
   <Config Name="WEB Port for GUI" Target="5800" Default="5800" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="VNC Port for GUI" Target="5900" Default="5900" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used." Type="Port" Display="advanced-hide" Required="false" Mask="false"/>
