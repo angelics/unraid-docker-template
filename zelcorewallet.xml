@@ -14,7 +14,7 @@
   <Category>Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5801]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/zelcorewallet.xml</TemplateURL>
-  <Icon>https://github.com/angelics/unraid-docker-zelcore-wallet/raw/master/icon.png</Icon>
+  <Icon>https://github.com/angelics/unraid-docker-zelcore-wallet/raw/master/favicon.png</Icon>
   <ExtraParams/>
   <Description>
 	ZelCore is a multi asset platform and wallet, free-to-use by all, with top quick-swap exchanges.
