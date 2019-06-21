@@ -9,7 +9,7 @@
   <Overview>
 	ZelCore is a multi asset platform and wallet, free-to-use by all, with top quick-swap exchanges.
 	ZelCore+ unlocks advanced trading functionality with API integrations to the top exchanges + TradingView.
-	based on jlesage/baseimage-gui:ubuntu 16.04.
+	based on jlesage's works!
   </Overview>
   <Category>Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5801]</WebUI>
@@ -19,12 +19,17 @@
   <Description>
 	ZelCore is a multi asset platform and wallet, free-to-use by all, with top quick-swap exchanges.
 	ZelCore+ unlocks advanced trading functionality with API integrations to the top exchanges + TradingView.
-	based on jlesage/baseimage-gui:ubuntu 16.04.
+	based on jlesage's works!
   </Description>
   <Beta>False</Beta>
   <Project>https://zel.network/project/zelcore/</Project>
-  <Date>2019-06-12</Date>
+  <Date>2019-06-21</Date>
   <Changes>[font size=4][center]ZelCore Wallet GUI Change Log[/center][/font]
+[font size=3][b]v190621[/b][/font]
+&#x00a0;&#x00a0;- Version: 2.0.5
+&#x00a0;&#x00a0;- default based on phusion 0.11(based on ubuntu 18.04)
+&#x00a0;&#x00a0;- ubuntu stil available through tag - :ubuntu , :ubuntu-16.04
+
 [font size=3][b]v190612[/b][/font]
 &#x00a0;&#x00a0;- Version: 2.0.4
 
