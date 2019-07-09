@@ -24,6 +24,9 @@
   <Project>https://github.com/RavenProject/Ravencoin</Project>
   <Date>2019-06-08</Date>
   <Changes>[font size=4][center]RavencoinP2P Change Log[/center][/font]
+[font size=3][b]v190709[/b][/font]
+&#x00a0;&#x00a0;- raven 2.4.0
+
 [font size=3][b]v190608[/b][/font]
 &#x00a0;&#x00a0;- bootstrap from ravenland (~5GB)
 &#x00a0;&#x00a0;- reduce 100mb in size
