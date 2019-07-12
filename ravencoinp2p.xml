@@ -22,8 +22,13 @@
   </Description>
   <Beta>False</Beta>
   <Project>https://github.com/RavenProject/Ravencoin</Project>
-  <Date>2019-06-08</Date>
+  <Date>2019-07-12</Date>
   <Changes>[font size=4][center]RavencoinP2P Change Log[/center][/font]
+[font size=3][b]v190712[/b][/font]
+&#x00a0;&#x00a0;- proper ravend shutdown thru raven-cli, with server=1 in raven.conf
+&#x00a0;&#x00a0;- provided check_status.sh
+&#x00a0;&#x00a0;&#x00a0;- docker exec RavencoinP2P sh /check_status.sh
+
 [font size=3][b]v190709[/b][/font]
 &#x00a0;&#x00a0;- raven 2.4.0
 
