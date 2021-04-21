@@ -9,7 +9,7 @@
   <Overview>
     The Ravencoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project.
 	This is just p2p, without wallet or gui.
-    Based on jlesage/baseimage:alpine-3.9.
+    Based on jlesage/baseimage:alpine-3.12
   </Overview>
   <Category>Other: Status:Stable</Category>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/ravencoinp2p.xml</TemplateURL>
@@ -18,12 +18,17 @@
   <Description>
     The Ravencoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project.
 	This is just p2p, without wallet or gui.
-    Based on jlesage/baseimage:alpine-3.9.
+    Based on jlesage/baseimage:alpine-3.12
   </Description>
   <Beta>False</Beta>
   <Project>https://github.com/RavenProject/Ravencoin</Project>
-  <Date>2019-07-12</Date>
+  <Date>2021-04-21</Date>
   <Changes>[font size=4][center]RavencoinP2P Change Log[/center][/font]
+[font size=3][b]v210421[/b][/font]
+&#x00a0;&#x00a0;- rebase jlesage/baseimage:alpine-3.12
+&#x00a0;&#x00a0;- RAVENCOIN_VERSION=4.3.2.1
+&#x00a0;&#x00a0;- BERKELEYDB no longer needed with working --disable-wallet
+
 [font size=3][b]v190712[/b][/font]
 &#x00a0;&#x00a0;- proper ravend shutdown thru raven-cli, with server=1 in raven.conf
 &#x00a0;&#x00a0;- provided check_status.sh
