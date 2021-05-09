@@ -20,9 +20,12 @@
 	fork from chvb/Docker-Apache-PHP, works from xbgmsharp/ipxe-buildweb. based on phusion 0.9.18(ubuntu 14.04)
   </Description>
   <Beta>False</Beta>
-  <Project>http://rom-o-matic.eu/</Project>
-  <Date>2019-07-07</Date>
+  <Project>https://github.com/xbgmsharp</Project>
+  <Date>2021-05-09</Date>
   <Changes>[font size=4][center]iPXE-buildweb Change Log[/center][/font]
+[font size=3][b]v210509[/b][/font]
+&#x00a0;&#x00a0;- changed to clone or pull on run
+
 [font size=3][b]v190707[/b][/font]
 &#x00a0;&#x00a0;- changed to clone on build, pull on run
 
@@ -47,8 +50,24 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
+   <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iPXE-buildweb/ipxe</HostDir>
+      <ContainerDir>/ipxe</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+   <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iPXE-buildweb/ipxe-buildweb</HostDir>
+      <ContainerDir>/ipxe-buildweb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <!-- Volume Mappings -->
   <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/iPXE-buildweb/logs" Mode="rw" Description="This location contains logs file from container. Container path: /logs" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="ipxe" Target="/ipxe" Default="/mnt/user/appdata/iPXE-buildweb/ipxe" Mode="rw" Description="This location contains logs file from container. Container path: /ipxe" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="ipxe-buildweb" Target="/ipxe-buildweb" Default="/mnt/user/appdata/iPXE-buildweb/ipxe-buildweb" Mode="rw" Description="This location contains logs file from container. Container path: /ipxe-buildweb" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <!-- Port Mappings -->
   <Config Name="WEB Port" Target="80" Default="8081" Mode="tcp" Description="Port used to access the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <DonateLink>https://www.paypal.me/angelics345</DonateLink>
