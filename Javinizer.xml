@@ -16,10 +16,11 @@
   <Description>
     A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.
   </Description>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
   <Beta>false</Beta>
   <Project>https://github.com/jvlflame/Javinizer</Project>
   <Date>2021-05-10</Date>
-  <Changes>[font size=4][center]ipfs Change Log[/center][/font]
+  <Changes>[font size=4][center]Javinizer Change Log[/center][/font]
 [font size=3][b]v210510[/b][/font]
 &#x00a0;&#x00a0;- initial release.
 
@@ -51,5 +52,4 @@
   <Config Name="/mnt" Target="/mnt" Default="/mnt/user/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /mnt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <!-- Port Mappings -->
   <Config Name="Port for GUI" Target="8600" Default="8600" Mode="tcp" Description="Port used to access the application's GUI" Type="Port" Display="always" Required="false" Mask="false">8600</Config>
-  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
 </Container>
