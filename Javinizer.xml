@@ -34,7 +34,7 @@
       </Port>
     </Publish>
   </Networking>
-   <Data>
+  <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/Javinizer/config/jvSettings.json</HostDir>
       <ContainerDir>/home/jvSettings.json</ContainerDir>
@@ -46,9 +46,10 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Config Name="jvSettings.json" Target="/home/jvSettings.json" Default="/mnt/user/appdata/Javinizer/config/jvSettings.json" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /home/jvSettings.json Type="Path" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="/mnt" Target="/mnt" Default="/mnt/user/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /mnt" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Labels/>
+  <Config Name="jvSettings.json" Target="/home/jvSettings.json" Default="/mnt/user/appdata/Javinizer/config/jvSettings.json" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /home/jvSettings.json" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Javinizer/config/jvSettings.json</Config>
+  <Config Name="/mnt" Target="/mnt" Default="/mnt/user/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /mnt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <!-- Port Mappings -->
-  <Config Name="Port for GUI" Target="8600" Default="8600" Mode="tcp" Description="Port used to access the application's GUI" Type="Port" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Port for GUI" Target="8600" Default="8600" Mode="tcp" Description="Port used to access the application's GUI" Type="Port" Display="always" Required="false" Mask="false">8600</Config>
   <DonateLink>https://www.paypal.me/angelics345</DonateLink>
 </Container>
