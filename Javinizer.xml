@@ -1,26 +1,31 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Javinizer</Name>
-  <Repository>jvlflame/javinizer</Repository>
-  <Registry>https://hub.docker.com/r/jvlflame/javinizer</Registry>
+  <Repository>angelics/unraid-docker-javinizer</Repository>
+  <Registry>https://hub.docker.com/r/angelics/unraid-docker-javinizer</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://github.com/jvlflame/Javinizer/issues</Support>
   <Overview>
-    A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.
+    A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format. After initial start, manually copy below into extra arguments and remove config, logs below
+	-v '/mnt/user/appdata/Javinizer/config/jvSettings.json':'/config/jvSettings.json':'rw' -v '/mnt/user/appdata/Javinizer/config/jvUncensor.csv':'/config/jvUncensor.csv':'rw' -v '/mnt/user/appdata/Javinizer/logs/jvHistory.csv':'/logs/jvHistory.csv':'rw' -v '/mnt/user/appdata/Javinizer/logs/jvLog.log':'/logs/jvLog.log':'rw' -v '/mnt/user/appdata/Javinizer/config/jvGenres.csv':'/config/jvGenres.csv':'rw' -v '/mnt/user/appdata/Javinizer/config/jvTags.csv':'/config/jvTags.csv':'rw' -v '/mnt/user/appdata/Javinizer/config/jvThumbs.csv':'/config/jvThumbs.csv':'rw'</Overview>
   </Overview>
   <Category>Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8600]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/Javinizer.xml</TemplateURL>
   <ExtraParams/>
   <Description>
-    A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.
-  </Description>
+    A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.After initial start, manually copy below into extra arguments and remove config, logs below
+	-v '/mnt/user/appdata/Javinizer/config/jvSettings.json':'/config/jvSettings.json':'rw' -v '/mnt/user/appdata/Javinizer/config/jvUncensor.csv':'/config/jvUncensor.csv':'rw' -v '/mnt/user/appdata/Javinizer/logs/jvHistory.csv':'/logs/jvHistory.csv':'rw' -v '/mnt/user/appdata/Javinizer/logs/jvLog.log':'/logs/jvLog.log':'rw' -v '/mnt/user/appdata/Javinizer/config/jvGenres.csv':'/config/jvGenres.csv':'rw' -v '/mnt/user/appdata/Javinizer/config/jvTags.csv':'/config/jvTags.csv':'rw' -v '/mnt/user/appdata/Javinizer/config/jvThumbs.csv':'/config/jvThumbs.csv':'rw'</Overview>
+  </Overview>
   <DonateLink>https://www.paypal.me/angelics345</DonateLink>
   <Beta>false</Beta>
   <Project>https://github.com/jvlflame/Javinizer</Project>
-  <Date>2021-05-10</Date>
+  <Date>2021-05-12</Date>
   <Changes>[font size=4][center]Javinizer Change Log[/center][/font]
+[font size=3][b]v210512[/b][/font]
+&#x00a0;&#x00a0;- persistent config and logs. 
+
 [font size=3][b]v210510[/b][/font]
 &#x00a0;&#x00a0;- initial release.
 
@@ -37,8 +42,13 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Javinizer/config/jvSettings.json</HostDir>
-      <ContainerDir>/home/jvSettings.json</ContainerDir>
+      <HostDir>/mnt/user/appdata/Javinizer/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Javinizer/logs</HostDir>
+      <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
 	<Volume>
@@ -48,7 +58,8 @@
     </Volume>
   </Data>
   <Labels/>
-  <Config Name="jvSettings.json" Target="/home/jvSettings.json" Default="/mnt/user/appdata/Javinizer/config/jvSettings.json" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /home/jvSettings.json" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Javinizer/config/jvSettings.json</Config>
+  <Config Name="config" Target="/config" Default="/mnt/user/appdata/Javinizer/config" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Javinizer/config</Config>
+  <Config Name="logs" Target="/logs" Default="/mnt/user/appdata/Javinizer/logs" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Javinizer/logs</Config>
   <Config Name="/mnt" Target="/mnt" Default="/mnt/user/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /mnt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <!-- Port Mappings -->
   <Config Name="Port for GUI" Target="8600" Default="8600" Mode="tcp" Description="Port used to access the application's GUI" Type="Port" Display="always" Required="false" Mask="false">8600</Config>
