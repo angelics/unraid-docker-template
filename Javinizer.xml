@@ -9,7 +9,7 @@
   <Overview>
     A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format. After initial start, manually copy below into extra arguments and remove config, logs below
 	-v '/mnt/user/appdata/Javinizer/config/jvSettings.json':'/config/jvSettings.json':'rw' -v '/mnt/user/appdata/Javinizer/config/jvUncensor.csv':'/config/jvUncensor.csv':'rw' -v '/mnt/user/appdata/Javinizer/logs/jvHistory.csv':'/logs/jvHistory.csv':'rw' -v '/mnt/user/appdata/Javinizer/logs/jvLog.log':'/logs/jvLog.log':'rw' -v '/mnt/user/appdata/Javinizer/config/jvGenres.csv':'/config/jvGenres.csv':'rw' -v '/mnt/user/appdata/Javinizer/config/jvTags.csv':'/config/jvTags.csv':'rw' -v '/mnt/user/appdata/Javinizer/config/jvThumbs.csv':'/config/jvThumbs.csv':'rw'</Overview>
-  </Overview>
+  </Description>
   <Category>Other: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8600]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/Javinizer.xml</TemplateURL>
