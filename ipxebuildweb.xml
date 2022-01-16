@@ -19,10 +19,14 @@
 	A web-based user interface that provide a way for the user to select any relevant iPXE build options, specify any embedded script, etc, and then construct and download the appropriate file.
 	fork from chvb/Docker-Apache-PHP, works from xbgmsharp/ipxe-buildweb. based on phusion 0.9.18(ubuntu 14.04)
   </Description>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
   <Beta>False</Beta>
   <Project>https://github.com/xbgmsharp</Project>
   <Date>2021-05-09</Date>
   <Changes>[font size=4][center]iPXE-buildweb Change Log[/center][/font]
+[font size=3][b]v220116[/b][/font]
+&#x00a0;&#x00a0;- upgrade on build and on run
+
 [font size=3][b]v210509[/b][/font]
 &#x00a0;&#x00a0;- changed to clone or pull on run
 
