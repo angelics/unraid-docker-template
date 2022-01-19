@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tixati</Name>
+  <Repository>angelics/unraid-docker-tixati</Repository>
+  <Registry>https://hub.docker.com/r/angelics/unraid-docker-tixati</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/</Support>
+  <Overview>
+	Tixati is a New and Powerful P2P System
+	100% Free, Simple and Easy to Use Bittorrent Client
+	Contains NO Spyware and NO Ads
+	based on jlesage/baseimage-gui:ubuntu-20.04
+  </Overview>
+  <Category>Network Services: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8081]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/tixati.xml</TemplateURL>
+  <Icon>https://www.tixati.com/favicon.ico</Icon>
+  <ExtraParams/>
+  <Description>
+	Tixati is a New and Powerful P2P System
+	100% Free, Simple and Easy to Use Bittorrent Client
+	Contains NO Spyware and NO Ads
+	based on jlesage/baseimage-gui:ubuntu-20.04
+  </Description>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+  <Beta>False</Beta>
+  <Project>https://www.tixati.com/</Project>
+  <Date>2022-01-19</Date>
+  <Changes>[font size=4][center]Tixati Change Log[/center][/font]
+[font size=3][b]v220119[/b][/font]
+&#x00a0;&#x00a0;- initial release
+  </Changes>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5801</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10844</HostPort>
+        <ContainerPort>10844</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+    </Networking>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10844</HostPort>
+        <ContainerPort>10844</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+   <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tixati/storage</HostDir>
+      <ContainerDir>/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+   <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tixati/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <!-- Volume Mappings -->
+  <Config Name="Logs" Target="/storage" Default="/mnt/user/appdata/tixati/storage" Mode="rw" Description="Download location. Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="ipxe" Target="/config" Default="/mnt/user/appdata/tixati/config" Mode="rw" Description="Config folder. Container path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <!-- Port Mappings -->
+  <Config Name="WEB Port" Target="80" Default="5801" Mode="tcp" Description="Port used to access the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Container Port" Target="10844" Default="10844" Mode="tcp" Description="Container Port." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Container Port" Target="10844" Default="10844" Mode="udp" Description="Container Port." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+</Container>
