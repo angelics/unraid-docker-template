@@ -39,22 +39,11 @@
         <ContainerPort>5800</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-    </Publish>
-  </Networking>
-    <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
       <Port>
         <HostPort>10844</HostPort>
         <ContainerPort>10844</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-    </Publish>
-  </Networking>
-    </Networking>
-    <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
       <Port>
         <HostPort>10844</HostPort>
         <ContainerPort>10844</ContainerPort>
