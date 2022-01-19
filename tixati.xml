@@ -69,7 +69,7 @@
   <Config Name="Logs" Target="/storage" Default="/mnt/user/appdata/tixati/storage" Mode="rw" Description="Download location. Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="ipxe" Target="/config" Default="/mnt/user/appdata/tixati/config" Mode="rw" Description="Config folder. Container path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <!-- Port Mappings -->
-  <Config Name="WEB Port" Target="80" Default="5801" Mode="tcp" Description="Port used to access the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="WEB Port" Target="5800" Default="5801" Mode="tcp" Description="Port used to access the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Container Port" Target="10844" Default="10844" Mode="tcp" Description="Container Port." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Container Port" Target="10844" Default="10844" Mode="udp" Description="Container Port." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <DonateLink>https://www.paypal.me/angelics345</DonateLink>
