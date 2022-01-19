@@ -13,7 +13,7 @@
 	based on jlesage/baseimage-gui:ubuntu-20.04
   </Overview>
   <Category>Network Services: Status:Stable</Category>
-  <WebUI>http://[IP]:[PORT:8081]</WebUI>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/tixati.xml</TemplateURL>
   <Icon>https://www.tixati.com/favicon.ico</Icon>
   <ExtraParams/>
