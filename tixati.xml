@@ -118,8 +118,8 @@
     </Variable>
    </Environment>
   <!-- Volume Mappings -->
-  <Config Name="Logs" Target="/storage" Default="/mnt/user/appdata/tixati/storage" Mode="rw" Description="Download location. Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="ipxe" Target="/config" Default="/mnt/user/appdata/tixati/config" Mode="rw" Description="Config folder. Container path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="storage" Target="/storage" Default="/mnt/user/appdata/tixati/storage" Mode="rw" Description="Download location. Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="config" Target="/config" Default="/mnt/user/appdata/tixati/config" Mode="rw" Description="Config folder. Container path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <!-- Variable Mappings -->
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
