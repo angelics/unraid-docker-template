@@ -116,6 +116,7 @@
       <Name>ENABLE_CJK_FONT</Name>
       <Mode/>
     </Variable>
+   </Environment>
   <!-- Volume Mappings -->
   <Config Name="Logs" Target="/storage" Default="/mnt/user/appdata/tixati/storage" Mode="rw" Description="Download location. Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="ipxe" Target="/config" Default="/mnt/user/appdata/tixati/config" Mode="rw" Description="Config folder. Container path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
