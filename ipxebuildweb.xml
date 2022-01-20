@@ -68,10 +68,18 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
+    <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iPXE-buildweb/cache</HostDir>
+      <ContainerDir>/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <!-- Volume Mappings -->
   <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/iPXE-buildweb/logs" Mode="rw" Description="This location contains logs file from container. Container path: /logs" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="ipxe" Target="/ipxe" Default="/mnt/user/appdata/iPXE-buildweb/ipxe" Mode="rw" Description="This location contains logs file from container. Container path: /ipxe" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="ipxe-buildweb" Target="/ipxe-buildweb" Default="/mnt/user/appdata/iPXE-buildweb/ipxe-buildweb" Mode="rw" Description="This location contains logs file from container. Container path: /ipxe-buildweb" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="cache" Target="/cache" Default="/mnt/user/appdata/iPXE-buildweb/cache" Mode="rw" Description="This location contains logs file from container. Container path: /cache" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <!-- Port Mappings -->
   <Config Name="WEB Port" Target="80" Default="8081" Mode="tcp" Description="Port used to access the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <DonateLink>https://www.paypal.me/angelics345</DonateLink>
