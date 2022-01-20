@@ -11,7 +11,7 @@
 	fork from chvb/Docker-Apache-PHP, works from xbgmsharp/ipxe-buildweb. based on phusion 0.9.18(ubuntu 14.04)
   </Overview>
   <Category>Network Services: Status:Stable</Category>
-  <WebUI>http://[IP]:[PORT:8081]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/ipxebuildweb.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/xbgmsharp/ipxe-buildweb/master/favicon.ico</Icon>
   <ExtraParams/>
