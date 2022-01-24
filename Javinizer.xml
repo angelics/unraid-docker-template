@@ -49,10 +49,16 @@
       <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	<Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Labels/>
   <Config Name="config" Target="/config" Default="/mnt/user/appdata/Javinizer/config" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Javinizer/config</Config>
   <Config Name="logs" Target="/logs" Default="/mnt/user/appdata/Javinizer/logs" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Javinizer/logs</Config>
+  <Config Name="/mnt" Target="/mnt" Default="/mnt/user/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /mnt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <!-- Port Mappings -->
   <Config Name="Port for GUI" Target="8600" Default="8600" Mode="tcp" Description="Port used to access the application's GUI" Type="Port" Display="always" Required="false" Mask="false">8600</Config>
 </Container>
