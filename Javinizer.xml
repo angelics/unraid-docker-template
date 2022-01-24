@@ -12,7 +12,7 @@
   <Category>MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:8600]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/Javinizer.xml</TemplateURL>
-  </ExtraParams>
+  <ExtraParams/>
   <Description>
     A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.
   </Description>
