@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>blocklist-mirror</Name>
+  <Repository>crowdsecurity/blocklist-mirror</Repository>
+  <Registry>https://hub.docker.com/r/crowdsecurity/blocklist-mirror</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/</Support>
+  <Overview>
+	This bouncer exposes CrowdSec's active decisions via provided HTTP endpoints in pre-defined formats. It can be used by network appliances which support consumption of blocklists via HTTP.
+	mkdir /mnt/user/appdata/blocklist-mirror
+	cd /mnt/user/appdata/blocklist-mirror
+	nano cfg.yaml
+
+	Copy in the contents of the cfg.yaml located from
+	https://docs.crowdsec.net/docs/bouncers/blocklist-mirror
+	Save, close and run the container
+  </Overview>
+  <Category>Network Services: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:41412]/security/blocklist</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/blocklist-mirror.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/crowdsec_logo.png</Icon>
+  <ExtraParams>-v '/mnt/cache/appdata/blocklist-mirror/cfg.yaml':'/etc/crowdsec/bouncers/crowdsec-blocklist-mirror.yaml':'rw'</ExtraParams>
+  <Description>
+	This bouncer exposes CrowdSec's active decisions via provided HTTP endpoints in pre-defined formats. It can be used by network appliances which support consumption of blocklists via HTTP.
+	mkdir /mnt/user/appdata/blocklist-mirror
+	cd /mnt/user/appdata/blocklist-mirror
+	nano cfg.yaml
+
+	Copy in the contents of the cfg.yaml located from
+	https://docs.crowdsec.net/docs/bouncers/blocklist-mirror
+	Save, close and run the container
+  </Description>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+  <Beta>False</Beta>
+  <Project>https://docs.crowdsec.net/docs/bouncers/blocklist-mirror</Project>
+  <Date>2023-01-11</Date>
+  <Changes>[font size=4][center]blocklist-mirror Change Log[/center][/font]
+[font size=3][b]v230111[/b][/font]
+&#x00a0;&#x00a0;- initial release
+  </Changes>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>41412</HostPort>
+        <ContainerPort>41412</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <!-- Port Mappings -->
+  <Config Name="Container Port" Target="41412" Default="41412" Mode="tcp" Description="Container Port." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+</Container>
